@@ -7,9 +7,7 @@ describe('Basqet', () => {
     let initiateTransaction;
     let initializedTransaction;
 
-    const basqet = new Basqet(process.env.BASQET_SECRET_KEY);
-
-    console.log(basqet.secretKey)
+    const basqet = new Basqet(process.env.BASQET_SECRET_KEY, process.env.BASQET_PUBLIC_KEY);
 
     it('Fetch all currencies', async () => {
         try {

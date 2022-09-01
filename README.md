@@ -18,7 +18,7 @@ Install node-client with npm
 ```javascript
 const Basqet = require('basqet-node')
 
-const basqet = new Basqet(secretKey)
+const basqet = new Basqet(secretKey, publicKey)
 
 // Fetch all fiat currency
 const currencies = basqet.fetchAllCurrency("FIAT")
@@ -32,7 +32,7 @@ const currencies = basqet.fetchAllCurrency("FIAT")
 ```javascript
 const Basqet = require('basqet-node')
 
-const basqet = new Basqet(secretKey)
+const basqet = new Basqet(secretKey, publicKey)
 
 const paymentData = {
      "customer": {
@@ -56,7 +56,7 @@ const transactionObj = basqet.initializeTransaction(paymentData);
 ```javascript
 const Basqet = require('basqet-node')
 
-const basqet = new Basqet(secretKey)
+const basqet = new Basqet(secretKey, publicKey)
 
 const transactionObj = basqet.initiateTransaction(<transactionId>, {'currency_id': <currency_id>})
 
@@ -68,7 +68,7 @@ const transactionObj = basqet.initiateTransaction(<transactionId>, {'currency_id
 ```javascript
 const Basqet = require('basqet-node')
 
-const basqet = new Basqet(secretKey)
+const basqet = new Basqet(secretKey, publicKey)
 
 const transactionObj = basqet.verifyTransaction(<transactionId>)
 
@@ -79,7 +79,7 @@ const transactionObj = basqet.verifyTransaction(<transactionId>)
 ```javascript
 const Basqet = require('basqet-node')
 
-const basqet = new Basqet(secretKey)
+const basqet = new Basqet(secretKey, publicKey)
 
 const transactionObj = basqet.triggerWebhook(<transactionId>, { status: 'SUCCESSFUL' })
 
